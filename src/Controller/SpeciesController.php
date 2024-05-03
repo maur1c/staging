@@ -1,5 +1,5 @@
 <?php
-// src/Controller/EpisodiosController.php
+// src/Controller/SpeciesController.php
 
 namespace App\Controller;
 
@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
-class EpisodiosController extends AbstractController
+class SpeciesController extends AbstractController
 {
     private HttpClientInterface $httpClient;
 
@@ -17,22 +17,22 @@ class EpisodiosController extends AbstractController
         $this->httpClient = $httpClient;
     }
 
-    #[Route('/episodios', name: 'episodios')]  // Ruta para acceder a los episodios
-    public function getEpisodes(): Response
+    #[Route('/species', name: 'species')]  // Ruta para acceder a las especies
+    public function getSpecies(): Response
     {
         try {
-            // Hacer una solicitud GET a la API de episodios
-            $response = $this->httpClient->request('GET', 'https://rickandmortyapi.com/api/episode');
+            // Hacer una solicitud GET a la API de especies
+            $response = $this->httpClient->request('GET', 'http://swapi.dev/api/species/3/');
 
             // Obtener los datos de la respuesta
             $data = $response->toArray();
 
             // Renderizar los datos obtenidos con una plantilla Twig
-            return $this->render('rick/episodes.html.twig', [
-                'episodes' => $data['results'], // Lista de episodios
+            return $this->render('menu/species.html.twig', [
+                'species' => $data, // Datos de la especie
             ]);
         } catch (\Exception $e) {
-            return new Response("Error al obtener episodios: " . $e->getMessage());
+            return new Response("Error al obtener las especies: " . $e->getMessage());
         }
     }
 }

@@ -1,0 +1,59 @@
+/* Resetea algunos estilos por defecto */
+body, h1, nav, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #333;
+}
+
+/* Estilos para la sección de introducción */
+.introduction {
+    text-align: center; 
+    padding: 20px;     
+    background-color: #f5f5f5; 
+}
+
+.introduction h1 {
+    font-size: 2em; 
+    color: black;     
+    height: 800px; /* Ajusta la altura según tu diseño */
+    background: url('../imag/menu2.webp') center center no-repeat; /* Modifiqué la propiedad background-size */
+    background-size: contain; /* La imagen se ajustará dentro del contenedor sin distorsionarse */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Estilos para el menú de navegación */
+nav {
+    background-color: #333; 
+    padding: 15px;          
+    display: flex;          
+    justify-content: center;
+}
+/* Estilos para los enlaces del menú */
+nav a {
+    font-size: 1.2em;  
+    color: #fff;       
+    text-decoration: none; 
+    margin: 0 15px;
+    padding: 5px 10px; /* Añadido para hacer los enlaces más grandes y fáciles de hacer clic */
+    border-radius: 5px; /* Añadido para hacer los enlaces más redondeados */
+    transition: color 0.3s, background-color 0.3s; /* Transición para el cambio de color y fondo */
+}
+
+/* Efecto hover para enlaces del menú */
+nav a:hover {
+    color: #ffcc00; 
+    background-color: rgba(255, 255, 255, 0.1); /* Cambio de color de fondo en hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra al hacer hover */
+}
+
+/* Agrega un efecto para el elemento activo (opcional) */
+nav a.active {
+    font-weight: bold; 
+    color: #ffcc00;
+    background-color: rgba(255, 255, 255, 0.2); /* Cambio de color de fondo para el elemento activo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para el elemento activo */
+}

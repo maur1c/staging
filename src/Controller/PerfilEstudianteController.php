@@ -8,12 +8,12 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
-class RickController extends AbstractController
+class PerfilEstudianteController extends AbstractController
 {
-   #[Route('Rick', name: 'Rick')]
+   #[Route('/perfil_estudiante', name: 'perfil_estudiante')]
    public function ajax(): Response
    {
-       return $this->render('Rick/index.html.twig');
+       return $this->render('menu/perfil_estudiante.html.twig');
    }
 }
 

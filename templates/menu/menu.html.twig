@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/') }}"> {# Utiliza asset() para referenciar archivos estáticos en Symfony #}
+    <title>MENU PRINCIPAL</title>
+    <link rel="stylesheet" href="{{ asset('css/menu.css') }}">
+</head>
+<body>
+    <header>
+
+        <nav>
+            <a href="{{ path('menu') }}">INICIO</a>
+            <a href="{{ path('species') }}">ESPECIE</a>
+            <a href="{{ path('starships') }}">NAVES</a>
+            <a href="{{ path('perfil_estudiante') }}">PERFIL</a>
+
+
+
+        </nav>
+    </header>
+
+        <section class="introduction">
+            <h1>MENU PRINCIPAL</h1>
+        </section>
+
+   
+
+
+   
+   
+</body>
+</html>
+

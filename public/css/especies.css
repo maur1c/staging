@@ -1,0 +1,101 @@
+/* Estilos básicos y reseteos */
+body, h1, h2, nav, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #191970; /* Fondo oscuro azul */
+    color: #fff; /* Texto claro */
+    font-family: 'Roboto', sans-serif; /* Fuente moderna */
+    line-height: 1.6; /* Espaciado entre líneas */
+    padding: 20px;
+}
+
+/* Estilo para el título principal */
+h1 {
+    text-align: center;
+    color: #FFD700; /* Color dorado */
+    font-size: 3em; /* Tamaño del título aumentado */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra al texto */
+}
+
+/* Estilos para el menú de navegación */
+nav {
+    background-color: #000; /* Fondo oscuro para el menú */
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 2px solid #FFD700; /* Borde dorado */
+}
+
+nav a {
+    color: #FFD700;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #FFD700; /* Color dorado al pasar el ratón */
+    color: #000; /* Texto oscuro al pasar el ratón */
+}
+
+/* Estilo para la información de la especie */
+.species-info {
+    background-color: #483D8B; /* Fondo oscuro violeta */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.species-info h2 {
+    text-align: center;
+    color: #FFD700;
+    font-size: 2em;
+    text-transform: uppercase;
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.species-info ul {
+    list-style: none;
+    padding: 10px;
+}
+
+.species-info ul li {
+    margin-bottom: 10px;
+}
+
+.species-info ul li strong {
+    color: #FFD700;
+}
+
+
+.species-info h2 {
+    text-align: center; /* Centra el título de la especie */
+    color: #e8e8e8; /* Texto claro */
+    font-size: 1.8em; /* Tamaño del título */
+    text-transform: uppercase; /* Mayúsculas para estilo Star Wars */
+    border-bottom: 2px solid #666; /* Borde inferior para separar */
+    padding-bottom: 10px; /* Espacio debajo del borde */
+}
+
+.species-info ul {
+    list-style: none; /* Elimina las viñetas */
+    padding: 10px; /* Espacio interno */
+}
+
+.species-info ul li {
+    margin-bottom: 10px; /* Espacio entre elementos de lista */
+}
+
+.species-info ul li strong {
+    color: #e8e8e8; /* Texto claro */
+}

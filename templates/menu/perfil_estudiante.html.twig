@@ -1,0 +1,49 @@
+{# perfil_estudiante.html.twig #}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Estudiante</title>
+    <link rel="stylesheet" href="{{ asset('css/perfil-estudiante.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Perfil de Estudiante</h1>
+    </header>
+    <header>
+        <nav>
+            <a href="{{ path('menu') }}">INICIO</a>
+            <a href="{{ path('species') }}">ESPECIE</a>
+            <a href="{{ path('starships') }}">NAVES</a>
+
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Información Personal</h2>
+            <ul>
+                <li><strong>Nombre:</strong> {{ 'Mauricio Mamani Flores' }}</li>
+                <li><strong>Edad:</strong> {{ '20' }}</li>
+                <li><strong>Correo Electrónico:</strong> {{ 'mauriciomamaniflores09@gmail.com' }}</li>
+                <li><strong>Dirección:</strong> {{ 'A.Ustariz' }}</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Información Académica</h2>
+            <ul>
+                {# Define las variables aquí #}
+                {% set universidad = 'Universidad Ucatec' %}
+                {% set carrera = 'A. sistemas' %}
+                {% set fecha_inicio = '03/05/2020' %}
+                {% set fecha_graduacion = '05/07/2025' %}
+                
+                <li><strong>Universidad:</strong> {{ universidad }}</li>
+                <li><strong>Carrera:</strong> {{ carrera }}</li>
+                <li><strong>Fecha de Inicio:</strong> {{ fecha_inicio }}</li>
+                <li><strong>Fecha de Graduación Prevista:</strong> {{ fecha_graduacion }}</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{# templates/starships.html.twig #}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starships</title>
+    <link rel="stylesheet" href="{{ asset('css/starships.css') }}">
+</head>
+<body>
+    <h1>Starships</h1>
+    <header>
+        <nav class="navegacion">
+            <a href="{{ path('menu') }}">INICIO</a>
+            <a href="{{ path('species') }}">ESPECIE</a>
+            <a href="{{ path('perfil_estudiante') }}">PERFIL</a>
+
+
+
+        </nav>
+    </header>
+    <ul id="starships-list">
+        <!-- Aquí se mostrarán los nombres de las naves espaciales -->
+    </ul>
+
+    <script src="{{ asset('js/starships.js') }}"></script>
+</body>
+</html>

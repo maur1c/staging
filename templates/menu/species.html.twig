@@ -1,0 +1,40 @@
+{# templates/menu_principal/species.html.twig #}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalles de Especies</title>
+    <link rel="stylesheet" href="{{ asset('css/especies.css') }}">
+</head>
+<body>
+    <h1>Detalles de la Especie</h1>
+    <header>
+
+        <nav>
+            <a href="{{ path('menu') }}">INICIO</a>
+            <a href="{{ path('starships') }}">STARSHIPS</a>
+            <a href="{{ path('species') }}">ESPECIE</a>
+            <a href="{{ path('perfil_estudiante') }}">PERFIL</a>
+            
+
+        </nav>
+    </header>
+
+    {% if species is defined %}
+        <div class="species-info"> {# Clase para diseño personalizado #}
+            <h2>{{ species.name }}</h2>
+            <ul>
+                <li><strong>Clasificación:</strong> {{ species.classification }}</li>
+                <li><strong>Designación:</strong> {{ species.designation }}</li>
+                <li><strong>Altura Media:</strong> {{ species.average_height }} cm</li>
+                <li><strong>Esperanza de Vida:</strong> {{ species.average_lifespan }} años</li>
+                <li><strong>Lenguaje:</strong> {{ species.language }}</li>
+            </ul>
+        </div>
+    {% else %}
+        <p>No se encontraron detalles de especies.</p>
+    {% endif %}
+    
+</body>
+</html>
